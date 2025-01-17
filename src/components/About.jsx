@@ -151,7 +151,7 @@ const About = () => (
       <Button
         variant="contained"
         color="primary"
-        href="https://drive.google.com/uc?export=download&id=1y4mALEFC4k8KXesYAR-JYGCuQqTyuGp-"  // Direct link to the PDF
+        href="https://drive.google.com/uc?export=download&id=15YGCcHfgyTpm17GGMNjMx6EWqiNLd0il"  // Direct link to the PDF
         endIcon={<ArrowForwardIos />}
         sx={{
           backgroundColor: '#ffeb3b',
