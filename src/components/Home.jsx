@@ -3,7 +3,7 @@ import { Container, Typography, Box, Button, Grid } from '@mui/material';
 import { styled } from '@mui/system';
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll'; // Import Link from react-scroll
-import myImage from '../logo.svg'; // Import your image here
+import myImage from '../hero.png'; // Import your image here
 
 // Define styled components
 const HomeSection = styled('section')({
@@ -92,10 +92,27 @@ const HeroButton = styled(Button)({
   marginRight: 'auto', // Push it to the left side
 });
 
+// Background light effect
+const BackgroundLight = styled(Box)({
+  position: 'absolute',
+  top: '0',
+  left: '0',
+  width: '100%',
+  height: '100%',
+  background: 'linear-gradient(270deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1))',
+  animation: 'moveLight 5s linear infinite',
+  zIndex: -1, // Ensure it is behind the content
+  '@keyframes moveLight': {
+    '0%': { backgroundPosition: '0% 50%' },
+    '100%': { backgroundPosition: '100% 50%' },
+  },
+});
+
 const ImageWrapper = styled(Box)({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
+  // border: '10px solid #f39c12',
   height: '100%', // Ensure the image wrapper takes full height
   '@media (max-width:900px)': {
     display: 'none', // Hide image on smaller screens
@@ -106,12 +123,13 @@ const Image = styled('img')({
   maxWidth: '100%',
   height: 'auto',
   borderRadius: '10px',
-  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
+  // boxShadow: '0 1px 8px rgba(135, 116, 116, 0.2)',
 });
 
 const Home = () => {
   return (
     <HomeSection id="home">
+      <BackgroundLight /> {/* Add the background light effect */}
       <Container>
         <FloatingText>
           Welcome to My Creative Space!
@@ -145,9 +163,11 @@ const Home = () => {
             </Box>
           </Grid>
           <Grid item xs={12} md={6}>
+            <FloatingText>
             <ImageWrapper>
               <Image src={myImage} alt="Prachi" />
             </ImageWrapper>
+            </FloatingText>
           </Grid>
         </Grid>
       </Container>

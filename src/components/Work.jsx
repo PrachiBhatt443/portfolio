@@ -7,7 +7,7 @@ import ozilogo from '../img/ozilogo.png'; // Import the logo
 // Define styled components
 const WorkSection = styled('section')({
   padding: '60px 0',
-//   backgroundColor: '#f9f9f9', // Off-white background
+   // Off-white background
   '@media (max-width:600px)': {
     padding: '40px 0',
   },
@@ -26,65 +26,61 @@ const SectionTitle = styled(Typography)({
 
 const TimelineContainer = styled(Box)({
   position: 'relative',
+  
+  display: 'flex',
+  alignItems: 'flex-start', // Align items to the start
   padding: '0 20px',
 });
 
-const HorizontalLine = styled('div')({
+const VerticalLine = styled('div')({
   position: 'absolute',
-//   top: '50%',
-  left: '0',
-  right: '0',
-  height: '10px', // Increased height for a broader line
-  backgroundColor: '#FDD017', // #FDD017 line
+  left: '30%',
+  top: '0',
+  bottom: '0',
+  width: '8px', // Width of the vertical line
+  backgroundColor: '#FDD017', // Yellow line
   zIndex: 0,
 });
 
-const TimelineItem = styled(Box)({
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  position: 'relative',
-  width: '100%',
-  marginBottom: '40px',
-  zIndex: 1,
-});
-
 const LogoContainer = styled(Box)({
-  width: '100px',
-  height: '100px',
+  width: '80px',
+  height: '80px',
   borderRadius: '50%',
   overflow: 'hidden',
-  border: '8px solid #FDD017', // #FDD017 border
+  border: '4px solid #FDD017', // Yellow border
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
   backgroundColor: '#fff', // White background for logo container
-  position: 'absolute',
-//   top: '50%',
-  transform: 'translateY(-50%)', // Center the logo vertically on the line
+  position: 'relative',
   zIndex: 1,
+  marginBottom: '20px', // Space between logos
 });
 
 const WorkDetails = styled(Box)({
-  backgroundColor: '#fff', // White background for details
+  backgroundColor: 'rgba(0, 0, 0, 0.7)', // Transparent black background
   borderRadius: '10px',
   padding: '20px',
   boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
   textAlign: 'center',
-  marginTop: '60px', // Space below the logo
+  marginLeft: '20px', // Space between the line and the card
+  width: '500px', // Fixed width for the card
+  transition: 'transform 0.3s ease', // Smooth transition for hover effect
+  '&:hover': {
+    transform: 'scale(1.05)', // Scale effect on hover
+  },
   zIndex: 1,
-  width:'60%',
 });
 
 const WorkTitle = styled(Typography)({
   fontSize: '1.5rem',
   fontWeight: 600,
-  color: '#1abc9c', // #FDD017 text
+  color: '#FDD017', // Yellow text
 });
 
 const WorkDescription = styled(Typography)({
   fontSize: '1rem',
-  color: '#666',
+  color: '#fff', // White text for description
 });
 
 // Sample internship data
@@ -111,10 +107,10 @@ const Work = () => {
     <WorkSection id="work">
       <SectionTitle>Internship Experience</SectionTitle>
       <TimelineContainer>
-        <HorizontalLine />
-        <Grid container justifyContent="center">
+        <VerticalLine />
+        <Grid container direction="column" >
           {internships.map((internship, index) => (
-            <Grid item xs={12} sm={6} md={4} key={index} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', position: 'relative' }}>
+            <Grid item key={index} style={{ display: 'flex', alignItems: 'center', marginBottom: '40px', marginLeft: '27%' }}>
               <LogoContainer>
                 <img
                   src={internship.logo}

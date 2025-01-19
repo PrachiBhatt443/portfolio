@@ -7,7 +7,7 @@ import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
-
+import Work from './components/Work';
 const App = () => {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const theme = useTheme();
@@ -112,6 +112,7 @@ const App = () => {
       <Home />
       <About />
       <Skills />
+      <Work/>
       <Projects />
       <Contact />
     </>
