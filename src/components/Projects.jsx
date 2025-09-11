@@ -6,6 +6,8 @@ import img1 from '../img/learn1.png';
 import img2 from '../img/accredian.png';
 import img3 from '../img/brews.png';
 import img4 from '../img/food1.png';
+import img5 from '../img/ecampus.png';
+import img6 from '../img/petcare.png';
 
 // Project data
 const projects = [
@@ -16,6 +18,22 @@ const projects = [
     liveLink: 'https://learn-ease-delta.vercel.app/',
     githubLink: 'https://github.com/PrachiBhatt443/LearnEase',
     image: img1,  
+  },
+  {
+    title: 'eCampus',
+    description: `A fully functional and responsive school website showcasing information, events, and animations. Built with React, Material-UI and Framer Motion to create engaging user experience.`,
+    techStack: 'React, Material-UI, Framer Motion',
+    liveLink: 'https://ecampus-opal.vercel.app/',
+    githubLink: 'https://github.com/PrachiBhatt443/ecampus',
+    image: img5,  
+  },
+  {
+    title: 'Pet Care Shop Mobile App',
+    description: `A cross-platform mobile application to simplify pet care — includes vet directory with maps, product shopping, cart + checkout, account management. Integrated with Firebase services and Google Maps API.`,
+    techStack: 'Flutter (or React Native if that’s what you used), Firebase Authentication & Firestore, Google Maps API, Geolocator',
+    liveLink: 'https://github.com/PrachiBhatt443/pet_care_shop?tab=readme-ov-file#-petcare-app', 
+    githubLink: 'https://github.com/PrachiBhatt443/pet_care_shop',
+    image: img6,  
   },
   {
     title: 'Accredian',
