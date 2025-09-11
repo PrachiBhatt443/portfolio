@@ -2,8 +2,8 @@ import React from 'react';
 import { Typography, Box } from '@mui/material';
 import { styled } from '@mui/system';
 import { FaJs, FaReact, FaCss3Alt, FaNodeJs, FaGitAlt, FaDatabase, FaPython, FaJava, FaCuttlefish, FaHtml5, FaMobileAlt, FaCode } from 'react-icons/fa';
-import { SiVisualstudio, SiTailwindcss, SiExpress, SiMongodb, SiMongoose, SiPostman, SiGooglecloud } from 'react-icons/si';
-
+import { SiTailwindcss, SiExpress, SiMongodb, SiMongoose, SiPostman, SiGooglecloud } from 'react-icons/si';
+import { VscVscode } from "react-icons/vsc";
 // Define styled components
 const SkillsSection = styled('section')({
   padding: '60px 0',
@@ -106,7 +106,7 @@ const skillsData = [
   { title: ' Node.js', icon: FaNodeJs, iconColor: '#68A063' },
   { title: 'Git', icon: FaGitAlt, iconColor: '#F05032' },
   { title: 'MySQL', icon: FaDatabase, iconColor: '#00758F' },
-  { title: 'Visual Studio Code', icon: SiVisualstudio, iconColor: '#007ACC' },
+  { title: 'Visual Studio Code', icon: VscVscode, iconColor: '#007ACC' },
   { title: 'Python', icon: FaPython, iconColor: '#306998' },
   { title: 'Java', icon: FaJava, iconColor: '#007396' },
   { title: 'C/C++', icon: FaCuttlefish, iconColor: '#00599C' },
